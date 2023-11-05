@@ -1,0 +1,29 @@
+<form (submit)="onSubmit()" class="container mt-4">
+  <div class="form-group">
+    <label for="nombre">Nombre:</label>
+    <input
+      type="text"
+      id="nombre"
+      [(ngModel)]="nombre"
+      name="nombre"
+      class="form-control"
+      required
+    />
+  </div>
+  <br />
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input
+      type="email"
+      id="email"
+      [(ngModel)]="email"
+      name="email"
+      class="form-control"
+      required
+    />
+  </div>
+  <br />
+  <button type="submit" class="btn btn-primary" [disabled]="!camposValidos()">
+    Enviar
+  </button>
+</form>
